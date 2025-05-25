@@ -5,10 +5,12 @@ import './App.css'
 import PreLoader from './Components/PreLoader'
 import Header from './Components/Header/Header'
 import Hero_Section from './Components/Hero_Section/Hero_Section'
+import About from './Components/About/About'
 
 // Import Data
 import dataMenu from './data/Navigation__Menu'
 import dataHeroMe from './data/Hero-me'
+import dataAbout from './data/data_Info'
 
 function App() {
   const [navMenu, setNavMenu] = useState(dataMenu)
@@ -23,6 +25,8 @@ function App() {
         <Header dataMenu={navMenu} />
         {/* Hero Section */}
         <Hero_Section {...heroMe} />
+        {/* sectio About */}
+        <About {...dataAbout}/>
       </div>
     </>
   )

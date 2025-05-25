@@ -5,7 +5,7 @@ import Navigation_Mobile_Menu_Btn from './Navigation_Mobile_Menu_Btn'
 const Navigatio = ({ dataMenu, onMobileMenuToggle }) => {
     return (
         <div className="flex justify-between items-center">
-            <a href="#" className="text-2xl font-bold text-indigo-400">Foliox</a>
+            <a href="#" className="text-2xl font-bold text-indigo-400">Mehdi Leilaei</a>
             {/* Navigation Menu */}
             <nav className="hidden md:flex space-x-8">
                 {dataMenu.map((item) => (<a key={item.id} href={item.href} className={item.classStyle}>{item.title}</a>))}

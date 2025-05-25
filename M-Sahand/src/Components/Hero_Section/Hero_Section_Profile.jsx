@@ -8,7 +8,7 @@ const Hero_Section_Profile = ({ Image }) => {
                 <img
                     src={Image}
                     alt="Profile"
-                    class="relative z-10 rounded-lg w-80 h-96 object-cover"></img>
+                    className="relative z-10 rounded-lg w-80 h-96 object-cover"></img>
             </div>
         </div>
     )
