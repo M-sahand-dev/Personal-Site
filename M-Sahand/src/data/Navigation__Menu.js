@@ -2,7 +2,7 @@ const menu = [
   {
     id: 1,
     href: "#home",
-    classStyle: "nav-link",
+    classStyle: "nav-link active",
     classStyleMobile: "nav-link-mobile",
     title: "Home",
   },

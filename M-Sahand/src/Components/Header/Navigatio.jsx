@@ -2,7 +2,7 @@ import React from 'react'
 import Navigation_Mobile_Menu_Btn from './Navigation_Mobile_Menu_Btn'
 
 
-const Navigatio = ({ dataMenu }) => {
+const Navigatio = ({ dataMenu, onMobileMenuToggle }) => {
     return (
         <div className="flex justify-between items-center">
             <a href="#" className="text-2xl font-bold text-indigo-400">Foliox</a>
@@ -12,7 +12,7 @@ const Navigatio = ({ dataMenu }) => {
             </nav>
 
             {/* Mobile Menu */}
-            <Navigation_Mobile_Menu_Btn />
+            <Navigation_Mobile_Menu_Btn onClick={onMobileMenuToggle} />
         </div>
     )
 }

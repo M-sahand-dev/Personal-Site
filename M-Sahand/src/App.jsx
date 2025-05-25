@@ -15,7 +15,7 @@ function App() {
       {/* Preloader */}
       <PreLoader />
 
-      <div className="px-8">
+      <div className="">
         {/* Header/Navbar  */}
         <Header dataMenu={navMenu} />
       </div>
