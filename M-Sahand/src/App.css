@@ -6,11 +6,13 @@
 @theme {
   --font-Poppins: "Poppins", sans-serif;
 }
+* {
+  transition: all 250ms ease-in-out;
+}
 body {
   scroll-behavior: smooth;
-  @apply font-Poppins bg-gray-900 text-white ;
+  @apply font-Poppins bg-gray-900 text-white;
 }
-
 
 .loader {
   border-top-color: #6366f1;
