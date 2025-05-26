@@ -3,8 +3,9 @@ import Info from './Info'
 import Aboout__information_Section from './Aboout__information_Section'
 import About_Experience from './About_Experience'
 import About_Education from './About_Education'
+import Skills from './Skills'
 
-const About = ({ info, information, education, experience }) => {
+const About = ({ info, information, education, experience, skills, language }) => {
   return (
     <div id="about" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
@@ -25,6 +26,8 @@ const About = ({ info, information, education, experience }) => {
             <About_Education education={education} />
           </div>
         </div>
+        {/* Skills */}
+        <Skills skills={skills} language={language} />
       </div>
 
     </div>
