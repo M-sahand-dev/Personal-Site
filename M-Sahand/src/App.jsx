@@ -6,6 +6,8 @@ import PreLoader from './Components/PreLoader'
 import Header from './Components/Header/Header'
 import Hero_Section from './Components/Hero_Section/Hero_Section'
 import About from './Components/About/About'
+import Services from './Components/Services/Services'
+import Portfolio from './Components/Portfolio/Portfolio'
 
 // Import Data
 import dataMenu from './data/Navigation__Menu'
@@ -15,18 +17,24 @@ import dataAbout from './data/data_Info'
 function App() {
   const [navMenu, setNavMenu] = useState(dataMenu)
   const [heroMe, setHeroMe] = useState(dataHeroMe)
+  const [about, setAbout] = useState(dataAbout)
+
+
   return (
     <>
       {/* Preloader */}
       <PreLoader />
-
       <div className="">
         {/* Header/Navbar  */}
         <Header dataMenu={navMenu} />
         {/* Hero Section */}
         <Hero_Section {...heroMe} />
         {/* sectio About */}
-        <About {...dataAbout}/>
+        <About {...about} />
+        {/* Services Section */}
+        <Services />
+        {/* Portfolio Section */}
+        <Portfolio />
       </div>
     </>
   )

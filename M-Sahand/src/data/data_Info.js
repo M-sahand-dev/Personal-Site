@@ -47,9 +47,9 @@ const data_Information = {
     { id: 4, skill: "Java Script", graid: 60 },
     { id: 5, skill: "Git&Github", graid: 55 },
     { id: 6, skill: "React.js", graid: 40 },
-    { id: 6, skill: "JQuery", graid: 40 },
-    { id: 7, skill: "Adobe Photoshop", graid: 75 },
-    { id: 8, skill: "Adobe Illustrator", graid: 65 },
+    { id: 7, skill: "JQuery", graid: 40 },
+    { id: 8, skill: "Adobe Photoshop", graid: 75 },
+    { id: 9, skill: "Adobe Illustrator", graid: 65 },
   ],
   language: [
     { id: 1, skill: "reading", graid: 60 },
