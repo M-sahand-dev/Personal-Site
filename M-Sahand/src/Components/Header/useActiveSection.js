@@ -27,8 +27,7 @@ const useActiveSection = (sectionIds, offset = 80) => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // بررسی اولیه
-
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, [sectionIds, offset]);
 
