@@ -1,7 +1,13 @@
-import React from 'react'
+import { useState } from 'react'
 import Categoris_Container from './Categoris_Container'
+import Portfolio_Items_Container from './Portfolio_Items_Container'
+
+// Import Data
+import portForioData from '../../data/portforio'
 
 const Portfolio = () => {
+  const [portforioItem, setPortforioItem] = useState(portForioData)
+
   return (
     <section id="portfolio" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
@@ -14,6 +20,8 @@ const Portfolio = () => {
         </div>
         {/* Portfolio Filter */}
         <Categoris_Container />
+        {/* Portfolio Items */}
+        <Portfolio_Items_Container portforioItem={portforioItem} />
       </div>
     </section>
   )
