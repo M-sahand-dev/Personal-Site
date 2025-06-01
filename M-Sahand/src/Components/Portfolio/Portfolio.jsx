@@ -1,3 +1,5 @@
+// refactor this component folder and add coment for all section ❗❗❗❗❗
+
 import { useState } from 'react'
 import Categoris_Container from './Categoris_Container'
 import Portfolio_Items_Container from './Portfolio_Items_Container'
@@ -22,6 +24,14 @@ const Portfolio = () => {
         <Categoris_Container />
         {/* Portfolio Items */}
         <Portfolio_Items_Container portforioItem={portforioItem} />
+
+        {/*  */}
+        <div className="text-center mt-12">
+          <a href="#" className="inline-block border border-indigo-600 text-indigo-400 hover:bg-indigo-600 hover:text-white px-6 py-3 rounded-md transition duration-300">
+            View
+            More Projects
+          </a>
+        </div>
       </div>
     </section>
   )
