@@ -11,6 +11,7 @@ import Portfolio from './Components/Portfolio/Portfolio'
 import Testimonials from './Components/Testimonials/Testimonials'
 import Blog from './Components/Blog/Blog'
 import Contact from './Components/Contact/Contact'
+import Footer from './Components/Footer/Footer'
 
 // Import Data
 import dataMenu from './data/Navigation__Menu'
@@ -45,7 +46,9 @@ function App() {
         {/* Contact Section */}
         <Contact />
         {/* Footer Section */}
+        <Footer />
         {/* Back to Top Button  */}
+
       </div>
     </>
   )
