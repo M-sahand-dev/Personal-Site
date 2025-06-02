@@ -8,6 +8,7 @@ import Hero_Section from './Components/Hero_Section/Hero_Section'
 import About from './Components/About/About'
 import Services from './Components/Services/Services'
 import Portfolio from './Components/Portfolio/Portfolio'
+import Testimonials from './Components/Testimonials/Testimonials'
 
 // Import Data
 import dataMenu from './data/Navigation__Menu'
@@ -35,6 +36,12 @@ function App() {
         <Services />
         {/* Portfolio Section */}
         <Portfolio />
+        {/* Testimonials Section */}
+        <Testimonials />
+        {/* Blog Section */}
+        {/* Contact Section */}
+        {/* Footer Section */}
+        {/* Back to Top Button  */}
       </div>
     </>
   )
