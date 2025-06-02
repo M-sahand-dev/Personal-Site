@@ -10,6 +10,7 @@ import Services from './Components/Services/Services'
 import Portfolio from './Components/Portfolio/Portfolio'
 import Testimonials from './Components/Testimonials/Testimonials'
 import Blog from './Components/Blog/Blog'
+import Contact from './Components/Contact/Contact'
 
 // Import Data
 import dataMenu from './data/Navigation__Menu'
@@ -42,6 +43,7 @@ function App() {
         {/* Blog Section */}
         <Blog />
         {/* Contact Section */}
+        <Contact />
         {/* Footer Section */}
         {/* Back to Top Button  */}
       </div>
