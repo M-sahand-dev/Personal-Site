@@ -68,28 +68,19 @@ function App() {
      * Defines three states: initial, animate, and exit
   */
   const pageVariants = {
-    initial: {
-      opacity: 0,
-      // Slight vertical offset for enter animation❗
-      y: 20
-    },
+    initial: { opacity: 0 },
     in: {
       opacity: 1,
-      y: 0,
       transition: {
-        // Smooth 800ms animation ❗
-        duration: 0.8,
-        // Natural easing curve ❗
+        duration: 0.6,
         ease: "easeOut"
       }
     },
     out: {
       opacity: 0,
-      // Upward exit animation
-      y: -50,
       transition: {
-        // Faster exit transition
-        duration: 0.5
+        duration: 0.4,
+        ease: "easeIn"
       }
     }
   }
