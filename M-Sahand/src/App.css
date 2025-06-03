@@ -12,8 +12,15 @@
 body {
   scroll-behavior: smooth;
   @apply font-Poppins bg-gray-900 text-white;
+  overflow: hidden;
+}
+.main-content {
+  overflow-x: hidden;
 }
 
+body.loaded {
+  overflow: auto;
+}
 .loader {
   border-top-color: #6366f1;
   -webkit-animation: spinner 1s linear infinite;
