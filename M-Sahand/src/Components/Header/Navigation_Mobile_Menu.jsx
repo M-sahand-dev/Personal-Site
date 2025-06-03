@@ -1,12 +1,19 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from './Navigation__Link';
 
-const Navigation_Mobile_Menu = ({ dataMenu, isOpen, onClose }) => {
+/**
+ * Mobile Menu Component
+ * @param {boolean} isOpen - Controls menu visibility
+ * @param {function} onClose - Callback to close menu
+ * @param {string} activeSection - Currently active section
+ * @param {Array} navItems - Navigation items data
+ */
+const Navigation_Mobile_Menu = ({ isOpen, onClose, activeSection, navItems, registerSection }) => {
     return (
         <AnimatePresence>
             {isOpen && (
                 <motion.div
-                    id="mobile-menu"
                     initial={{ opacity: 0, y: -20, height: 0 }}
                     animate={{
                         opacity: 1,
@@ -37,18 +44,18 @@ const Navigation_Mobile_Menu = ({ dataMenu, isOpen, onClose }) => {
                         className="py-4 px-6"
                     >
                         <div className="flex flex-col space-y-4">
-                            {dataMenu.map((item) => (
-                                <motion.a
+                            {navItems.map(item => (
+                                <Link
                                     key={item.id}
+                                    id={item.id}
                                     href={item.href}
-                                    className={item.classStyleMobile}
+                                    active={activeSection === item.id}
+                                    mobile
                                     onClick={onClose}
-                                    whileHover={{ scale: 1.05, x: 5 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    transition={{ type: "spring", stiffness: 400 }}
+                                    registerSection={registerSection}
                                 >
-                                    {item.title}
-                                </motion.a>
+                                    {item.label}
+                                </Link>
                             ))}
                         </div>
                     </motion.div>
