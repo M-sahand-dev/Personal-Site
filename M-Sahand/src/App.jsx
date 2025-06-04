@@ -16,8 +16,6 @@ import Footer from './Components/Footer/Footer'
 import Back_Top from './Components/Back_Top'
 
 // Data imports (marked for potential removal in future)
-// import dataMenu from './data/Navigation__Menu'
-import dataHeroMe from './data/Hero-me'
 import dataAbout from './data/data_Info'
 
 /*
@@ -28,8 +26,6 @@ import dataAbout from './data/data_Info'
 */
 function App() {
   // State management for component data
-  // const [navMenu, setNavMenu] = useState(dataMenu)// del❌❌
-  const [heroMe, setHeroMe] = useState(dataHeroMe)// del❌❌
   const [about, setAbout] = useState(dataAbout)// del❌❌
 
   // Loading state control
@@ -116,7 +112,7 @@ function App() {
                 <Header />
 
                 {/* Hero/Banner Section */}
-                <Hero_Section {...heroMe} />
+                <Hero_Section />
 
                 {/* About Me Section */}
                 <About {...about} />

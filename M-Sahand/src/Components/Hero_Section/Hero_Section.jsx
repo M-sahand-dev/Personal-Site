@@ -1,28 +1,50 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import Hero_Section_Profile from './Hero_Section_Profile'
+import Description from './Hero_Section_Description'
+import Mehdi from "../../assets/image/profile/Mehdi.jpg"
 
-const Hero_Section = ({ id, name, family, skils, info, Image }) => {
+/**
+     * Animation variants for the container element
+     * Defines the hidden and visible states with staggered children animations
+*/
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            when: "beforeChildren",
+            staggerChildren: 0.3
+        }
+    }
+}
+
+/**
+     * Hero Section Component - The main hero section of the portfolio
+     * Contains profile description and image with sophisticated animations
+*/
+const Hero_Section = () => {
     return (
-        <section id={id} className="min-h-screen flex items-center pt-20">
-            <div className="container mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center">
-                <div className="md:w-1/2 mb-12 md:mb-0">
-                    <h4 className="text-indigo-400 text-lg mb-2">Hello, I'm</h4>
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                        {name}
+        <section id='home' className="min-h-screen flex items-center pt-20">
+            {/* Animated container with responsive padding and layout */}
+            <motion.div
+                className="container mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center"
+                initial="hidden"
+                animate="visible"
+                variants={containerVariants}
+            >
+                {/* Profile description component with personal information */}
+                <Description
+                    name={"Mehdi"}
+                    family="Leylaei"
+                    skils="React Developer & Frontend Developer"
+                    info={"I developing and build beautiful websites and applications that help people and businesses grow online."}
+                />
 
-                        <span className="text-indigo-400"> {family}</span>
-                    </h1>
-                    <h3 className="text-xl md:text-2xl mb-6">{skils}</h3>
-                    <p className="text-gray-400 mb-8 max-w-lg">{info}</p>
-                    <div className="flex space-x-4">
-                        <a href="#contact" className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-md transition duration-300">Hire Me</a>
-                        <a href="#" className="border border-indigo-600 text-indigo-400 hover:bg-indigo-600 hover:text-white px-6 py-3 rounded-md transition duration-300">Download CV</a>
-                    </div>
-                </div>
-
-                {/* image profile */}
-                <Hero_Section_Profile Image={Image}/>
-            </div>
+                {/* Profile image component with sophisticated border animation */}
+                <Hero_Section_Profile Image={Mehdi} />
+            </motion.div>
         </section>
     )
 }
