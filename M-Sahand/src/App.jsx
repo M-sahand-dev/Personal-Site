@@ -15,7 +15,7 @@ import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
 import Back_Top from './Components/Back_Top'
 
-// Data imports (marked for potential removal in future)
+// Data imports
 import dataAbout from './data/data_Info'
 
 /*
@@ -26,7 +26,7 @@ import dataAbout from './data/data_Info'
 */
 function App() {
   // State management for component data
-  const [about, setAbout] = useState(dataAbout)// del❌❌
+  const [about, setAbout] = useState(dataAbout)
 
   // Loading state control
   const [loading, setLoadig] = useState(true);
