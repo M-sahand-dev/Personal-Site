@@ -1,37 +1,49 @@
-// refactor this component folder and add coment for all section ❗❗❗❗❗
-
 import { useState } from 'react'
 import Categoris_Container from './Categoris_Container'
 import Portfolio_Items_Container from './Portfolio_Items_Container'
-
-// Import Data
+import Category from './Categoris'
+import PortForio__Title from './PortForio__Title'
+import Portfolio__Button from './Portfolio__Button'
+// Import static portfolio data
 import portForioData from '../../data/portforio'
 
 const Portfolio = () => {
+  // Local state for current filtered items
   const [portforioItem, setPortforioItem] = useState(portForioData)
+
+  // Handle category filtering
+  const filterItems = (category) => {
+    console.log("Filtering by category:", category); // Debug: can be removed in production
+
+    if (category === "all") {
+      setPortforioItem(portForioData)
+      return
+    }
+
+    // Filter portfolio data by category
+    const newCategory = portForioData.filter((item) => item.category === category)
+    setPortforioItem(newCategory)
+  }
 
   return (
     <section id="portfolio" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h4 className="text-indigo-400 text-lg mb-2">
-            My Work
-          </h4>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
-          <div className="w-20 h-1 bg-indigo-600 mx-auto"></div>
-        </div>
-        {/* Portfolio Filter */}
-        <Categoris_Container />
-        {/* Portfolio Items */}
+        {/* Section Title */}
+        <PortForio__Title />
+
+        {/* Filter Buttons */}
+        <Categoris_Container>
+          <Category onClick={() => filterItems("all")}>All</Category>
+          <Category onClick={() => filterItems("Design")}>Design</Category>
+          <Category onClick={() => filterItems("Development")}>Development</Category>
+          <Category onClick={() => filterItems("Branding")}>Branding</Category>
+        </Categoris_Container>
+
+        {/* Filtered Portfolio Items */}
         <Portfolio_Items_Container portforioItem={portforioItem} />
 
-        {/*  */}
-        <div className="text-center mt-12">
-          <a href="#" className="inline-block border border-indigo-600 text-indigo-400 hover:bg-indigo-600 hover:text-white px-6 py-3 rounded-md transition duration-300">
-            View
-            More Projects
-          </a>
-        </div>
+        {/* Optional: Call-to-action button */}
+        <Portfolio__Button />
       </div>
     </section>
   )

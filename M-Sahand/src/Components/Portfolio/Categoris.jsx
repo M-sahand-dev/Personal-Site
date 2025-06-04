@@ -1,7 +1,10 @@
-
-const Category = ({ children }) => {
+// Reusable button component for category filtering
+const Category = ({ children, onClick }) => {
     return (
-        <button className="portfolio-filter-btn">{children}</button>
+        // Calls onClick handler when clicked
+        <button className="portfolio-filter-btn" onClick={onClick}>
+            {children}
+        </button>
     )
 }
 
