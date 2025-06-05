@@ -6,9 +6,9 @@ const Contact = () => {
     return (
         <div id="contact" className="py-20">
             <div className="container mx-auto px-6">
-                {/* Contact Section Header */}
+                {/* Section Header */}
                 <Contact__Title />
-                {/* Contact Section Content */}
+                {/* Section Content */}
                 <Contact__Content />
             </div>
         </div>

@@ -5,9 +5,9 @@ import Form from "./Cintact__Content_Form"
 const Contact__Content = () => {
     return (
         <div className="flex flex-col md:flex-row">
-            {/* in this section we will add the contact information */}
+            {/* Contact information section */}
             <Contact__Content_About />
-            {/* in this form for sending camant */}
+            {/* Contact form for sending messages */}
             <Form />
         </div>
     )
