@@ -1,12 +1,16 @@
-// I want to use slider swiper in thes section 
-// for test I want to create this section with vanila js ❗❗❗❗❗❗
-// I will create this section with vanila js❗❗❗❗❗❗❗❗
-
 import React from 'react'
 
+/**
+ * Wrapper component for individual testimonial slide content.
+ * 
+ * Acts as a slide container in the testimonial slider.
+ *
+ * @param {React.ReactNode} children - The content of the testimonial (usually a testimonial card).
+ */
 const Testimonials__Slider_item = ({ children }) => {
     return (
         <div className="testimonial-slider relative">
+            {/* Render the testimonial content passed as children */}
             {children}
         </div>
     )
