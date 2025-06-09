@@ -2,21 +2,22 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import './App.css'
 
-// Component imports with clear grouping
-import PreLoader from './Components/PreLoader'
-import Header from './Components/Header/Header'
-import Hero_Section from './Components/Hero_Section/Hero_Section'
-import About from './Components/About/About'
-import Services from './Components/Services/Services'
-import Portfolio from './Components/Portfolio/Portfolio'
-import Testimonials from './Components/Testimonials/Testimonials'
-import Blog from './Components/Blog/Blog'
-import Contact from './Components/Contact/Contact'
-import Footer from './Components/Footer/Footer'
-import Back_Top from './Components/Back_Top'
+import {
+  PreLoader,
+  Header,
+  Hero_Section,
+  About,
+  Services,
+  Portfolio,
+  Testimonials,
+  Blog,
+  Contact,
+  Footer,
+  Back_Top,
+} from "./helper/components";
 
 // Data imports
-import dataAbout from './data/data_Info'
+import { data_Information } from "./helper/data"
 
 /*
  * Main App Component
@@ -26,7 +27,7 @@ import dataAbout from './data/data_Info'
 */
 function App() {
   // State management for component data
-  const [about, setAbout] = useState(dataAbout)
+  const [about] = useState(data_Information)
 
   // Loading state control
   const [loading, setLoadig] = useState(true);

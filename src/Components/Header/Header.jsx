@@ -3,6 +3,8 @@ import { Link } from "react-scroll";
 import Navigation_Mobile_Menu_Btn from './Navigation_Mobile_Menu_Btn';
 import Navigation_Mobile_Menu from './Navigation_Mobile_Menu';
 
+import { navItems } from '../../helper/data';
+
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -12,16 +14,6 @@ const Header = () => {
             return !prev;
         });
     };
-
-    const navItems = [
-        { id: 'home', label: 'Home', offset: -150 },
-        { id: 'about', label: 'About', offset: -100 },
-        { id: 'services', label: 'Services', offset: -100 },
-        { id: 'portfolio', label: 'Portfolio', offset: -100 },
-        { id: 'testimonials', label: 'Testimonials', offset: -100 },
-        { id: 'blog', label: 'Blog', offset: -150 },
-        { id: 'contact', label: 'Contact', offset: -150 }
-    ];
 
     return (
         <header className="fixed w-full z-50 bg-gray-900/90 backdrop-blur-sm shadow-lg">

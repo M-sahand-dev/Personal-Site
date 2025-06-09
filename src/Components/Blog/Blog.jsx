@@ -6,7 +6,7 @@ import Blog__Title from './Blog__Title';
 import BLog__Content from './BLog__Content';
 
 // Blog data
-import data from "../../data/blog";
+import { blog__Post as data } from '../../helper/data';
 
 const Blog = () => {
     // Initialize blog post state with static data

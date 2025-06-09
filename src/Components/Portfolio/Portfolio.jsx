@@ -5,7 +5,7 @@ import Category from './Categoris'
 import PortForio__Title from './PortForio__Title'
 import Portfolio__Button from './Portfolio__Button'
 // Import static portfolio data
-import portForioData from '../../data/portforio'
+import { portForioData } from '../../helper/data'
 
 const Portfolio = () => {
   // Local state for current filtered items

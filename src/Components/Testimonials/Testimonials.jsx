@@ -12,33 +12,13 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+import { testimonials } from '../../helper/data';
+
 /**
  * Testimonials section component.
  * Displays a Swiper slider with client reviews and navigation controls.
  */
 const Testimonials = () => {
-    // Static list of testimonial data
-    const testimonials = [
-        {
-            image: 'https://www.course-api.com/images/people/person-1.jpeg',
-            name: 'Susan Smith',
-            revioe: "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out...",
-            education: "CEO, Tech Solutions Inc."
-        },
-        {
-            image: 'https://www.course-api.com/images/people/person-2.jpeg',
-            name: 'Anna Johnson',
-            revioe: "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out...",
-            education: "Marketing Director, Brandify Co."
-        },
-        {
-            image: 'https://www.course-api.com/images/people/person-4.jpeg',
-            name: 'Peter Jones',
-            revioe: "I'm baby meggings twee health goth +1. Bicycle rights tumeric chartreuse before they sold out...",
-            education: "Lead Developer, CodeCraft LLC"
-        }
-    ];
-
     return (
         <section id="testimonials" className="py-20 relative">
             <div className="container mx-auto px-6 relative">
